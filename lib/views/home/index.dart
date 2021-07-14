@@ -3,11 +3,12 @@ import 'package:clonetra/constants/images.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/locations.dart';
+import 'widgets/nearby.dart';
 
 class HomeView extends StatefulWidget {
 
-  Function() handleNavigationDrawer;
-  Function() handleAddFavoriteLocation;
+  final Function() handleNavigationDrawer;
+  final Function() handleAddFavoriteLocation;
 
   HomeView({
     required this.handleNavigationDrawer,
@@ -59,6 +60,12 @@ class _HomeViewState extends State<HomeView> {
           Padding(
             padding: EdgeInsets.only(
               top: 8
+            ),
+            child: Nearby(),
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              top: 16
             ),
             child: FavoriteLocations(
               onAddLocation: widget.handleAddFavoriteLocation,
