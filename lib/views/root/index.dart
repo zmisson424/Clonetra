@@ -49,9 +49,9 @@ class _ClonetraRootState extends State<ClonetraRoot> {
       case 0:
         return HomeView();
       case 1:
-        return CardsView();
-      case 2:
         return TripView();
+      case 2:
+        return CardsView();
       case 3:
         return TicketView();
       default:
