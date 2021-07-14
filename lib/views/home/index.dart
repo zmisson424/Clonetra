@@ -1,7 +1,8 @@
 import 'package:clonetra/constants/icons.dart';
 import 'package:clonetra/constants/images.dart';
-import 'package:clonetra/theme/colors.dart';
 import 'package:flutter/material.dart';
+
+import 'widgets/locations.dart';
 
 class HomeView extends StatefulWidget {
 
@@ -52,6 +53,12 @@ class _HomeViewState extends State<HomeView> {
                 ),
               )
             ],
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              top: 8
+            ),
+            child: FavoriteLocations(),
           )
         ],
       )
