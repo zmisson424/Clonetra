@@ -17,4 +17,5 @@ class ClonetraIcons {
   static const String terms = "assets/icons/3.0x/terms.png";
   static const String help = "assets/icons/3.0x/help.png";
   static const String arrowForward = "assets/icons/3.0x/forward_arrow.png";
+  static const String menu = "assets/icons/3.0x/menu_dots.png";
 }

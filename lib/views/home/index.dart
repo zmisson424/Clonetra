@@ -1,3 +1,5 @@
+import 'package:clonetra/constants/icons.dart';
+import 'package:clonetra/constants/images.dart';
 import 'package:clonetra/theme/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -20,18 +22,19 @@ class _HomeViewState extends State<HomeView> {
       width: double.infinity,
       height: double.infinity,
       padding: EdgeInsets.only(
-        left: 6,
-        right: 6
+        left: 12,
+        right: 12
       ),
       child: Column(
         children: [
           Row(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Text(
-                "ventra",
-                style: TextStyle(
-                  color: ClonetraColors.white
+              SizedBox(
+                width: 60,
+                height: 24,
+                child: Image.asset(
+                  ClonetraImages.ventraLogo
                 ),
               ),
               Expanded(
@@ -40,12 +43,11 @@ class _HomeViewState extends State<HomeView> {
               GestureDetector(
                 behavior: HitTestBehavior.translucent,
                 onTap: widget.handleNavigationDrawer,
-                child: Container(
-                  width: 40,
-                  child: Icon(
-                    Icons.more_vert,
-                    size: 20,
-                    color: ClonetraColors.white
+                child: SizedBox(
+                  width: 14,
+                  height: 14,
+                  child: Image.asset(
+                    ClonetraIcons.menu
                   ),
                 ),
               )
