@@ -3,10 +3,16 @@ import 'package:flutter/material.dart';
 
 class AddLocation extends StatelessWidget {
 
+  final Function() onAddLocation;
+
+  AddLocation({
+    required this.onAddLocation
+  });
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => print("Todo"),
+      onTap: onAddLocation,
       child: Container(
         padding: EdgeInsets.only(
           top: 14,

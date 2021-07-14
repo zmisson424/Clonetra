@@ -5,6 +5,12 @@ import 'add_location.dart';
 
 class FavoriteLocations extends StatelessWidget {
 
+  final Function() onAddLocation;
+
+  FavoriteLocations({
+    required this.onAddLocation
+  });
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -48,7 +54,9 @@ class FavoriteLocations extends StatelessWidget {
               padding: EdgeInsets.only(
                 top: 8
               ),
-              child: AddLocation(),
+              child: AddLocation(
+                onAddLocation: onAddLocation,
+              ),
             )
           ],
         ),

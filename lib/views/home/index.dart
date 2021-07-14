@@ -7,9 +7,11 @@ import 'widgets/locations.dart';
 class HomeView extends StatefulWidget {
 
   Function() handleNavigationDrawer;
+  Function() handleAddFavoriteLocation;
 
   HomeView({
-    required this.handleNavigationDrawer
+    required this.handleNavigationDrawer,
+    required this.handleAddFavoriteLocation
   });
 
   _HomeViewState createState()=> _HomeViewState();
@@ -58,7 +60,9 @@ class _HomeViewState extends State<HomeView> {
             padding: EdgeInsets.only(
               top: 8
             ),
-            child: FavoriteLocations(),
+            child: FavoriteLocations(
+              onAddLocation: widget.handleAddFavoriteLocation,
+            ),
           )
         ],
       )

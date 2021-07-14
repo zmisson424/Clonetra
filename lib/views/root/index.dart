@@ -55,6 +55,11 @@ class _ClonetraRootState extends State<ClonetraRoot> {
       case 0:
         return HomeView(
           handleNavigationDrawer: _openNavigationDrawer,
+          handleAddFavoriteLocation: (){
+            setState(() {
+              _currentTab = 1;
+            });
+          },
         );
       case 1:
         return TripView();
@@ -65,6 +70,11 @@ class _ClonetraRootState extends State<ClonetraRoot> {
       default:
         return HomeView(
           handleNavigationDrawer: _openNavigationDrawer,
+           handleAddFavoriteLocation: (){
+            setState(() {
+              _currentTab = 1;
+            });
+          },
         );
     }
   }
