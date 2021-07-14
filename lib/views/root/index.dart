@@ -5,6 +5,7 @@ import 'package:clonetra/views/cards/index.dart';
 import 'package:clonetra/views/tickets/index.dart';
 import 'package:clonetra/views/trip/index.dart';
 import 'widgets/bottom_nav.dart';
+import 'package:clonetra/widgets/nav_drawer.dart';
 
 class ClonetraRoot extends StatefulWidget {
 
@@ -15,9 +16,12 @@ class _ClonetraRootState extends State<ClonetraRoot> {
 
   int _currentTab = 0;
 
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -41,13 +45,17 @@ class _ClonetraRootState extends State<ClonetraRoot> {
           });
         },
       ),
+      endDrawer: ClonetraNavDrawer(),
+      endDrawerEnableOpenDragGesture: false,
     );
   }
 
   Widget _buildTabs(){
     switch(_currentTab){
       case 0:
-        return HomeView();
+        return HomeView(
+          handleNavigationDrawer: _openNavigationDrawer,
+        );
       case 1:
         return TripView();
       case 2:
@@ -55,7 +63,13 @@ class _ClonetraRootState extends State<ClonetraRoot> {
       case 3:
         return TicketView();
       default:
-        return HomeView();
+        return HomeView(
+          handleNavigationDrawer: _openNavigationDrawer,
+        );
     }
+  }
+
+  void _openNavigationDrawer(){
+    _scaffoldKey.currentState?.openEndDrawer();
   }
 }
