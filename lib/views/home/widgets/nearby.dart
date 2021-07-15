@@ -3,6 +3,8 @@ import 'package:clonetra/constants/icons.dart';
 import 'package:clonetra/theme/colors.dart';
 import 'package:flutter/material.dart';
 
+import 'package:clonetra/widgets/transportation_tile.dart';
+
 class Nearby extends StatelessWidget {
 
   @override
@@ -63,7 +65,11 @@ class Nearby extends StatelessWidget {
               padding: EdgeInsets.only(
                 top: 8
               ),
-              child: Container(),
+              child: Column(
+                children: [
+                  TransportationTile()
+                ],
+              ),
             )
           ],
         ),
