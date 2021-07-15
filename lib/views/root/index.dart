@@ -68,7 +68,9 @@ class _ClonetraRootState extends State<ClonetraRoot> {
           handleNavigationDrawer: _openNavigationDrawer,
         );
       case 3:
-        return TicketView();
+        return TicketView(
+          handleNavigationDrawer: _openNavigationDrawer,
+        );
       default:
         return HomeView(
           handleNavigationDrawer: _openNavigationDrawer,
