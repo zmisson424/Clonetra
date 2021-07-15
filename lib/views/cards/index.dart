@@ -86,10 +86,22 @@ class _CardsViewState extends State<CardsView> {
               decoration: BoxDecoration(
                 color: ClonetraColors.white
               ),
-              padding: EdgeInsets.all(12),
+              padding: EdgeInsets.all(20),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      SizedBox(
+                        width: 24,
+                        height: 24,
+                        child: Image.asset(
+                          ClonetraIcons.refresh
+                        ),
+                      )
+                    ],
+                  ),
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
@@ -147,7 +159,7 @@ class _CardsViewState extends State<CardsView> {
                   Padding(
                     padding: EdgeInsets.only(
                       top: 8,
-                      bottom: 68
+                      bottom: 60
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
