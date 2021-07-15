@@ -18,4 +18,8 @@ class ClonetraIcons {
   static const String help = "assets/icons/3.0x/help.png";
   static const String arrowForward = "assets/icons/3.0x/forward_arrow.png";
   static const String menu = "assets/icons/3.0x/menu_dots.png";
+  static const String directionUp = "assets/icons/3.0x/direction_up_arrow.png";
+  static const String directionDown = "assets/icons/3.0x/direction_down_arrow.png";
+  static const String directionLeft = "assets/icons/3.0x/direction_left_arrow.png";
+  static const String directionRight = "assets/icons/3.0x/direction_right_arrow.png";
 }

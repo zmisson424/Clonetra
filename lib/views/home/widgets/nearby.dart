@@ -16,8 +16,8 @@ class Nearby extends StatelessWidget {
       ),
       child: Container(
         padding: EdgeInsets.only(
-          top: 12,
-          bottom: 8
+          top: 16,
+          bottom: 10
         ),
         child: Column(
           children: [
@@ -67,7 +67,17 @@ class Nearby extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  TransportationTile()
+                  TransportationTile(),
+                  Divider(
+                    thickness: 1,
+                    height: 1,
+                  ),
+                  TransportationTile(),
+                  Divider(
+                    thickness: 1,
+                    height: 1,
+                  ),
+                  TransportationTile(),
                 ],
               ),
             )
