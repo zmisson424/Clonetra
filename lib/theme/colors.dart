@@ -12,4 +12,5 @@ class ClonetraColors {
   static final Color navyBlue = new Color(0xFF004987);
   static final Color lightBlue = new Color(0xFF0077A4);
   static final Color iconBlue = new Color(0xFF2066B1);
+  static final Color buttonBlue = new Color(0xFF00ADD8);
 }
