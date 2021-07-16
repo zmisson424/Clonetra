@@ -62,7 +62,9 @@ class _ClonetraRootState extends State<ClonetraRoot> {
           },
         );
       case 1:
-        return TripView();
+        return TripView(
+          handleNavigationDrawer: _openNavigationDrawer,
+        );
       case 2:
         return CardsView(
           handleNavigationDrawer: _openNavigationDrawer,
