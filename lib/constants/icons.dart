@@ -24,4 +24,5 @@ class ClonetraIcons {
   static const String directionRight = "assets/icons/3.0x/direction_right_arrow.png";
   static const String addCard = "assets/icons/3.0x/add_card.png";
   static const String refresh = "assets/icons/3.0x/refresh.png";
+  static const String info = "assets/icons/3.0x/info.png";
 }

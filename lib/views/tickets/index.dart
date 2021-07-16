@@ -114,9 +114,12 @@ class _TicketViewState extends State<TicketView> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(
-                        Icons.info_rounded,
-                        color: ClonetraColors.buttonBlue,
+                      SizedBox(
+                        width: 14,
+                        height: 14,
+                        child: Image.asset(
+                          ClonetraIcons.info
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(
@@ -129,15 +132,121 @@ class _TicketViewState extends State<TicketView> {
                             color: ClonetraColors.darkGray
                           ),
                         ),
-                      )
+                      ),
                     ],
-                  )
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: 24,
+                      right: 24,
+                      top: 52,
+                      bottom: 22
+                    ),
+                    child: Container(
+                      width: double.infinity,
+                      height: 44,
+                      child: OutlinedButton(
+                        onPressed: () => print("Todo"),
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(ClonetraColors.buttonBlue),
+                        ),
+                        child: Text(
+                          "Buy Metra tickets",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: ClonetraColors.white
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  _ItemDivider(),
+                  _ItemRow(
+                    label: "See transit history",
+                    onTap: () => print("Todo"),
+                  ),
+                  _ItemDivider(),
+                  _ItemRow(
+                    label: "Move tickets to this device",
+                    onTap: () => print("Todo"),
+                  ),
+                  _ItemDivider(),
                 ],
               ),
             ),
           )
         ],
       )
+    );
+  }
+}
+
+class _ItemDivider extends StatelessWidget{
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(
+        left: 24
+      ),
+      child: Divider(
+        height: 1,
+        thickness: 1,
+      ),
+    );
+  }
+}
+
+class _ItemRow extends StatelessWidget {
+
+  final String label;
+
+  final Function() onTap;
+
+  _ItemRow({
+    required this.label,
+    required this.onTap
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      elevation: 0,
+      color: ClonetraColors.white,
+      child: InkWell(
+        onTap: onTap,
+        child: Container(
+          width: double.infinity,
+          padding: EdgeInsets.only(
+            left: 24,
+            right: 24,
+            top: 14,
+            bottom: 14
+          ),
+          child: Row(
+            children: [
+              Text(
+                label,
+                style: TextStyle(
+                  fontSize: 14,
+                  color: ClonetraColors.darkGray
+                ),
+              ),
+              Expanded(
+                child: Container(),
+              ),
+              SizedBox(
+                width: 14,
+                height: 14,
+                child: Image.asset(
+                  ClonetraIcons.arrowForward
+                ),
+              )
+            ],
+          )
+        ),
+      ),
     );
   }
 }
