@@ -1,6 +1,7 @@
 import 'package:clonetra/constants/icons.dart';
 import 'package:clonetra/theme/colors.dart';
 import 'package:flutter/material.dart';
+import 'widgets/map.dart';
 
 class TripView extends StatefulWidget {
 
@@ -84,6 +85,12 @@ class _TripViewState extends State<TripView> {
                 )
               ),
             ],
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              top: 8
+            ),
+            child: ClonetraMap(),
           )
         ],
       )

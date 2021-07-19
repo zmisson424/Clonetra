@@ -1,6 +1,7 @@
 import 'package:clonetra/constants/icons.dart';
 import 'package:clonetra/constants/images.dart';
 import 'package:flutter/material.dart';
+import 'package:location/location.dart';
 
 import 'widgets/locations.dart';
 import 'widgets/nearby.dart';
