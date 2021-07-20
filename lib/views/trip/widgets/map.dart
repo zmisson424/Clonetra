@@ -24,7 +24,7 @@ class _ClonetraMapState extends State<ClonetraMap> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 300,
+      height: 296,
       child: _initialPosition != null ? Stack(
         children: [
           Positioned.fill(
