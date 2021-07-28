@@ -17,6 +17,7 @@ class ClonetraIcons {
   static const String terms = "assets/icons/3.0x/terms.png";
   static const String help = "assets/icons/3.0x/help.png";
   static const String arrowForward = "assets/icons/3.0x/forward_arrow.png";
+  static const String arrowUp = "assets/icons/3.0x/up_arrow.png";
   static const String menu = "assets/icons/3.0x/menu_dots.png";
   static const String directionUp = "assets/icons/3.0x/direction_up_arrow.png";
   static const String directionDown = "assets/icons/3.0x/direction_down_arrow.png";
@@ -25,4 +26,5 @@ class ClonetraIcons {
   static const String addCard = "assets/icons/3.0x/add_card.png";
   static const String refresh = "assets/icons/3.0x/refresh.png";
   static const String info = "assets/icons/3.0x/info.png";
+  static const String metraTicket = "assets/icons/3.0x/metra_ticket.png";
 }

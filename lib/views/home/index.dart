@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'widgets/locations.dart';
 import 'widgets/nearby.dart';
+import 'widgets/tickets.dart';
 
 class HomeView extends StatefulWidget {
 
@@ -56,6 +57,13 @@ class _HomeViewState extends State<HomeView> {
                 ),
               )
             ],
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              top: 8,
+              bottom: 8
+            ),
+            child: Tickets(),
           ),
           Padding(
             padding: EdgeInsets.only(
